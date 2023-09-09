@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import Vaso from './components/Vaso';
 
 function App() {
+  let vasos = [1,2,3,4,5,6,7,8]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Registra tu water intake con tu hydrohomie</h1>
+      <div className='vasos-container'>
+        {vasos.map((i)=> (
+          <Vaso key={i}/>
+        ))}
+      </div>
     </div>
   );
 }
